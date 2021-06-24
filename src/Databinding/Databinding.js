@@ -4,6 +4,7 @@ export default class Databinding extends Component {
     //Thuộc tính 
     name = 'Mon';
     
+    
     //Phương thức tự xây dựng 
     renderCard = () => {
         let product = {
@@ -30,6 +31,7 @@ export default class Databinding extends Component {
             <div className="container">
                 <div id="content"> {tenHocVien} </div>
                 <div id="content"> {this.name} </div>
+                
                 {this.renderCard()}
             </div>
         )
