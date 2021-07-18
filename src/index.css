@@ -4,4 +4,18 @@
   height: 50px;
 }
 
+p{
+  color: white;
+}
+.face {
+  position: relative;
+}
 
+.glasses {
+  width: 16rem;
+  position: absolute;
+  top: 8rem;
+  left: 6.5rem;
+  background: transparent;
+  opacity: 0.7;
+}
