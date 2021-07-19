@@ -79,77 +79,77 @@ export default class GlassShop extends Component {
 
   render() {
     return (
-      <div>
-        <div className="header bg-dark text-white text-center">Glass Shop</div>
-        <div className="d-flex justify-content-center">
-          <div className="col-3">
-            <img src="./img/glassesImage/model.jpg" className="w-100 face" />
+      <div className="content" style={{backgroundImage: "url(./img/glassesImage/background.jpg)"}}>
+        <div className="header">Glass Shop</div>
+        <div className="body">
+          <div className="body__item">
+            <img src="./img/glassesImage/model.jpg" className=" face" />
             <img src={this.state.imgSrc} className="glasses"/>
           </div>
-          <div className="col-3">
-            <img src="./img/glassesImage/model.jpg" classname="w-100" />
+          <div className="body__item">
+            <img src="./img/glassesImage/model.jpg" />
           </div>
         </div>
-        <div className="container d-flex ">
-          <div className="col-2">
+        <div className="choose_glasses">
+          <div>
             <button>
-              <img src="./img/glassesImage/v1.png" className="w-100" onClick={()=>{
+              <img src="./img/glassesImage/v1.png" onClick={()=>{
                   this.handleChangeGlasses('v1')
               }}></img>
             </button>
           </div>
-          <div className="col-2">
+          <div>
             <button>
-              <img src="./img/glassesImage/v2.png" className="w-100" onClick={()=>{
+              <img src="./img/glassesImage/v2.png" onClick={()=>{
                   this.handleChangeGlasses('v2')
               }}></img>
             </button>
           </div>
-          <div className="col-2">
+          <div>
             <button>
-              <img src="./img/glassesImage/v3.png" className="w-100" onClick={()=>{
+              <img src="./img/glassesImage/v3.png"onClick={()=>{
                   this.handleChangeGlasses('v3')
               }}></img>
             </button>
           </div>
-          <div className="col-2">
+          <div>
             <button>
-              <img src="./img/glassesImage/v4.png" className="w-100" onClick={()=>{
+              <img src="./img/glassesImage/v4.png" onClick={()=>{
                   this.handleChangeGlasses('v4')
               }}></img>
             </button>
           </div>
-          <div className="col-2">
+          <div>
             <button>
-              <img src="./img/glassesImage/v5.png" className="w-100" onClick={()=>{
+              <img src="./img/glassesImage/v5.png" onClick={()=>{
                   this.handleChangeGlasses('v5')
               }}></img>
             </button>
           </div>
-          <div className="col-2">
+          <div>
             <button>
-              <img src="./img/glassesImage/v6.png" className="w-100" onClick={()=>{
+              <img src="./img/glassesImage/v6.png" onClick={()=>{
                   this.handleChangeGlasses('v6')
               }}></img>
             </button>
           </div>
-          <div className="col-2">
+          <div>
             <button>
-              <img src="./img/glassesImage/v7.png" className="w-100" onClick={()=>{
+              <img src="./img/glassesImage/v7.png" onClick={()=>{
                   this.handleChangeGlasses('v7')
               }}></img>
             </button>
           </div>
-          <div className="col-2">
+          <div>
             <button>
-              <img src="./img/glassesImage/v8.png" className="w-100" onClick={()=>{
+              <img src="./img/glassesImage/v8.png" onClick={()=>{
                   this.handleChangeGlasses('v8')
               }}></img>
             </button>
           </div>
-          <div className="col-2">
+          <div>
             <button>
-              <img src="./img/glassesImage/v9.png" className="w-100" onClick={()=>{
+              <img src="./img/glassesImage/v9.png" onClick={()=>{
                   this.handleChangeGlasses('v9')
               }}></img>
             </button>

@@ -1,21 +1,66 @@
-.header {
-  background-color: rgb(9, 160, 110);
-  color: #fff;
-  height: 50px;
+
+
+/* layout bài tập 23/07 */
+
+.content {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-p{
+.header {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1.5rem 0;
 }
-.face {
+
+.body {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.body .body__item {
+  margin: 0 2rem;
+}
+
+.body .body__item .face {
   position: relative;
 }
 
-.glasses {
+.body .body__item .glasses {
   width: 16rem;
   position: absolute;
-  top: 8rem;
-  left: 6.5rem;
+  top: 15rem;
+  left: 32.6rem;
   background: transparent;
   opacity: 0.7;
 }
+
+.content .choose_glasses {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.content .choose_glasses button {
+  width: 10rem;
+  border-style: none;
+  margin: 1rem;
+  background-color: white;
+}
+
+.content .choose_glasses button img {
+  width: 100%;
+  
+}
+
+
