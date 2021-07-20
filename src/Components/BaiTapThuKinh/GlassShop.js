@@ -79,7 +79,7 @@ export default class GlassShop extends Component {
 
   render() {
     return (
-      <div className="content" style={{backgroundImage: "url(./img/glassesImage/background.jpg)"}}>
+      <div className="content" >
         <div className="header">Glass Shop</div>
         <div className="body">
           <div className="body__item">
@@ -87,7 +87,7 @@ export default class GlassShop extends Component {
             <img src={this.state.imgSrc} className="glasses"/>
           </div>
           <div className="body__item">
-            <img src="./img/glassesImage/model.jpg" />
+            <img src="./img/glassesImage/model.jpg" className="face"/>
           </div>
         </div>
         <div className="choose_glasses">
