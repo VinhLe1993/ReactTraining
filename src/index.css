@@ -2,7 +2,7 @@
 
 /* layout bài tập 23/07 */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -42,6 +42,22 @@ body {
 .body .body__item {
   margin: 0 7rem;
   width: 20rem;
+  
+}
+
+.body .body__item .cardInfo {
+  position: absolute;
+  top: 26.8rem;
+  width: 20rem;
+  background-color: rgba(250, 81, 2, 0.33);
+}
+
+.body .body__item .cardInfo h3 {
+  color: blue;
+}
+
+.body .body__item .cardInfo p {
+  color: #eee;
 }
 
 .body .body__item .face {
@@ -82,7 +98,7 @@ body {
   border: 1px solid #eee;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
   transform: translateY(-0.5rem);
-}
+} */
 
 
 

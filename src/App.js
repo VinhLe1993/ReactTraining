@@ -11,6 +11,9 @@ import HomeLayout from "./Props/DemoProps/HomeLayout.js";
 // import RenderWithMap from "./RenderWithMap/RenderWithMap"
 // import ShoesShop from "./Props/ShoesShop/ShoesShop.js";
 import GlassShop from "./Components/BaiTapThuKinh/GlassShop.js";
+import BaiTapXemChiTiet from "./Props/BaiTapXemChiTiet/BaiTapXemChiTiet.js";
+import ExerciseCarStore from "./Props/ExerciseCarStore/ExerciseCarStore.js";
+
 function App() {
   return (
     <div className="App">
@@ -25,7 +28,9 @@ function App() {
       {/* <HomeLayout /> */}
       {/* <RenderWithMap /> */}
       {/* <ShoesShop /> */}
-      <GlassShop />
+      {/* <GlassShop /> */}
+      {/* <BaiTapXemChiTiet /> */}
+      <ExerciseCarStore/>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import GlassesImgButton from "./GlassesImgButton.js";
+import GlassInfo from "./GlassInfo.js";
 import ModelFace from "./ModelFace.js";
 
 export default class GlassShop extends Component {
@@ -70,15 +71,22 @@ export default class GlassShop extends Component {
   ];
 
   state = {
-    imgSrc: "./glassesImage/v1.png",
+    imgSrc: this.arrGlasses[0].url,
+    // glassesName: this.arrGlasses[0].name,
+    // glassesInfo: this.arrGlasses[0].desc,
+    // glassesPrice: this.arrGlasses[0].price,
   };
 
   glassesButton = () => {
     let arrButton = this.arrGlasses.map((glasses, index) => {
       return (
         <div>
-          <button onClick={() => {this.handleChangeGlasses(glasses.id)}}>
-            <GlassesImgButton glasses={this.arrGlasses[index]}/>
+          <button
+            onClick={() => {
+              this.handleChangeGlasses(glasses.id);
+            }}
+          >
+            <GlassesImgButton glasses={this.arrGlasses[index]} />
           </button>
         </div>
       );
@@ -86,13 +94,15 @@ export default class GlassShop extends Component {
     return arrButton;
   };
 
+  
+
   handleChangeGlasses(id) {
     this.setState({
       imgSrc: `./glassesImage/v${id}.png`,
     });
   }
 
-
+  
   render() {
     return (
       <div className="content">
@@ -101,14 +111,13 @@ export default class GlassShop extends Component {
           <div className="body__item">
             <ModelFace faceImg="./glassesImage/model.jpg" />
             <img src={this.state.imgSrc} className="glasses" />
+            <GlassInfo glasses={this.arrGlasses[0]} />
           </div>
           <div className="body__item">
             <ModelFace faceImg="./glassesImage/model.jpg" />
           </div>
         </div>
-        <div className="choose_glasses">
-          {this.glassesButton()}
-        </div>
+        <div className="choose_glasses">{this.glassesButton()}</div>
       </div>
     );
   }
