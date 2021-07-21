@@ -7,7 +7,7 @@
 // import HandleEvent from "./HandleEvents/HandleEvent";
 // import StyleComponent from "./StyleComponent/StyleComponent.js";
 // import StateDemo from "./StateDemo/StateDemo.js";
-// import HomeLayout from "./Props/DemoProps/HomeLayout.js";
+import HomeLayout from "./Props/DemoProps/HomeLayout.js";
 // import RenderWithMap from "./RenderWithMap/RenderWithMap"
 // import ShoesShop from "./Props/ShoesShop/ShoesShop.js";
 import GlassShop from "./Components/BaiTapThuKinh/GlassShop.js";

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import GlassesImgButton from "./GlassesImgButton.js";
+import ModelFace from "./ModelFace.js";
 
 export default class GlassShop extends Component {
   arrGlasses = [
@@ -68,92 +70,44 @@ export default class GlassShop extends Component {
   ];
 
   state = {
-      imgSrc: "./img/glassesImage/v1.png"
+    imgSrc: "./glassesImage/v1.png",
+  };
+
+  glassesButton = () => {
+    let arrButton = this.arrGlasses.map((glasses, index) => {
+      return (
+        <div>
+          <button onClick={() => {this.handleChangeGlasses(glasses.id)}}>
+            <GlassesImgButton glasses={this.arrGlasses[index]}/>
+          </button>
+        </div>
+      );
+    });
+    return arrButton;
+  };
+
+  handleChangeGlasses(id) {
+    this.setState({
+      imgSrc: `./glassesImage/v${id}.png`,
+    });
   }
 
-  handleChangeGlasses = (glasses) => {
-      this.setState({
-        imgSrc: `./img/glassesImage/${glasses}.png`
-      })
-  }
 
   render() {
     return (
-      <div className="content" >
+      <div className="content">
         <div className="header">Glass Shop</div>
         <div className="body">
           <div className="body__item">
-            <img src="./img/glassesImage/model.jpg" className=" face" />
-            <img src={this.state.imgSrc} className="glasses"/>
+            <ModelFace faceImg="./glassesImage/model.jpg" />
+            <img src={this.state.imgSrc} className="glasses" />
           </div>
           <div className="body__item">
-            <img src="./img/glassesImage/model.jpg" className="face"/>
+            <ModelFace faceImg="./glassesImage/model.jpg" />
           </div>
         </div>
         <div className="choose_glasses">
-          <div>
-            <button>
-              <img src="./img/glassesImage/v1.png" onClick={()=>{
-                  this.handleChangeGlasses('v1')
-              }}></img>
-            </button>
-          </div>
-          <div>
-            <button>
-              <img src="./img/glassesImage/v2.png" onClick={()=>{
-                  this.handleChangeGlasses('v2')
-              }}></img>
-            </button>
-          </div>
-          <div>
-            <button>
-              <img src="./img/glassesImage/v3.png"onClick={()=>{
-                  this.handleChangeGlasses('v3')
-              }}></img>
-            </button>
-          </div>
-          <div>
-            <button>
-              <img src="./img/glassesImage/v4.png" onClick={()=>{
-                  this.handleChangeGlasses('v4')
-              }}></img>
-            </button>
-          </div>
-          <div>
-            <button>
-              <img src="./img/glassesImage/v5.png" onClick={()=>{
-                  this.handleChangeGlasses('v5')
-              }}></img>
-            </button>
-          </div>
-          <div>
-            <button>
-              <img src="./img/glassesImage/v6.png" onClick={()=>{
-                  this.handleChangeGlasses('v6')
-              }}></img>
-            </button>
-          </div>
-          <div>
-            <button>
-              <img src="./img/glassesImage/v7.png" onClick={()=>{
-                  this.handleChangeGlasses('v7')
-              }}></img>
-            </button>
-          </div>
-          <div>
-            <button>
-              <img src="./img/glassesImage/v8.png" onClick={()=>{
-                  this.handleChangeGlasses('v8')
-              }}></img>
-            </button>
-          </div>
-          <div>
-            <button>
-              <img src="./img/glassesImage/v9.png" onClick={()=>{
-                  this.handleChangeGlasses('v9')
-              }}></img>
-            </button>
-          </div>
+          {this.glassesButton()}
         </div>
       </div>
     );
