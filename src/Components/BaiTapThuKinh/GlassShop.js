@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import GlassesImgButton from "./GlassesImgButton.js";
-import GlassInfo from "./GlassInfo.js";
 import ModelFace from "./ModelFace.js";
 
 export default class GlassShop extends Component {
@@ -71,10 +70,13 @@ export default class GlassShop extends Component {
   ];
 
   state = {
-    imgSrc: this.arrGlasses[0].url,
-    // glassesName: this.arrGlasses[0].name,
-    // glassesInfo: this.arrGlasses[0].desc,
-    // glassesPrice: this.arrGlasses[0].price,
+    productDetail: {
+      id: 1,
+      price: 30,
+      name: "GUCCI G8850U",
+      url: "./glassesImage/v1.png",
+      desc: "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. ",
+    },
   };
 
   glassesButton = () => {
@@ -83,7 +85,7 @@ export default class GlassShop extends Component {
         <div>
           <button
             onClick={() => {
-              this.handleChangeGlasses(glasses.id);
+              this.handleClick(glasses);
             }}
           >
             <GlassesImgButton glasses={this.arrGlasses[index]} />
@@ -94,24 +96,26 @@ export default class GlassShop extends Component {
     return arrButton;
   };
 
-  
-
-  handleChangeGlasses(id) {
+  handleClick = (productClick) => {
     this.setState({
-      imgSrc: `./glassesImage/v${id}.png`,
-    });
+      productDetail: productClick
+    })
   }
 
-  
   render() {
+    let {productDetail} = this.state; 
     return (
       <div className="content">
         <div className="header">Glass Shop</div>
         <div className="body">
           <div className="body__item">
             <ModelFace faceImg="./glassesImage/model.jpg" />
-            <img src={this.state.imgSrc} className="glasses" />
-            <GlassInfo glasses={this.arrGlasses[0]} />
+            <img src={productDetail.url} className="glasses" />
+            <div className="cardInfo">
+              <h3>{productDetail.name}</h3>
+              <p>{productDetail.desc}</p>
+              <p>{productDetail.price}</p>
+            </div>
           </div>
           <div className="body__item">
             <ModelFace faceImg="./glassesImage/model.jpg" />
