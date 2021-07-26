@@ -13,6 +13,7 @@ import HomeLayout from "./Props/DemoProps/HomeLayout.js";
 import GlassShop from "./Components/BaiTapThuKinh/GlassShop.js";
 import BaiTapXemChiTiet from "./Props/BaiTapXemChiTiet/BaiTapXemChiTiet.js";
 import ExerciseCarStore from "./Props/ExerciseCarStore/ExerciseCarStore.js";
+import ShoppingCart from "./Props/ShoppingCart/ShoppingCart.js";
 
 function App() {
   return (
@@ -28,9 +29,9 @@ function App() {
       {/* <HomeLayout /> */}
       {/* <RenderWithMap /> */}
       {/* <ShoesShop /> */}
-      <GlassShop />
+      {/* <GlassShop /> */}
       {/* <BaiTapXemChiTiet /> */}
-      {/* <ExerciseCarStore/> */}
+      <ShoppingCart />
     </div>
   );
 }

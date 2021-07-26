@@ -1,3 +1,5 @@
+
+
 import React, { Component } from "react";
 
 export default class Modal extends Component {
@@ -5,15 +7,7 @@ export default class Modal extends Component {
       let {productDetail} = this.props
     return (
       <div>
-        {/* Button trigger modal */}
-        <button
-          type="button"
-          className="btn btn-primary btn-lg"
-          data-toggle="modal"
-          data-target="#modelId"
-        >
-          Launch
-        </button>
+        
         {/* Modal */}
         <div
           className="modal fade"

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import SanPham from "./SanPham.js";
+import PhoneList from "./PhoneList";
+import ProductDetail from "./ProductDetail";
 
 export default class BaiTapXemChiTiet extends Component {
-  mangDienThoai = [
+  productList = [
     {
       maSP: 1,
       tenSP: "VinSmart Live",
@@ -42,7 +43,7 @@ export default class BaiTapXemChiTiet extends Component {
   ];
 
   state = {
-    sanPhamChiTiet: {
+    productDetail: {
       maSP: 3,
       tenSP: "Iphone XS Max",
       manHinh: "OLED, 6.5, 1242 x 2688 Pixels",
@@ -56,72 +57,31 @@ export default class BaiTapXemChiTiet extends Component {
     },
   };
 
-  renderProduct = () => {
-    //callback function; là một hàm chưa được gọi đóng vai trò 
-    // tham số truyền đi. Và sẽ được gọi tại hàm hoặc component nhận hàm này
+  handleClick = (productClick) => {
+    this.setState({
+      productDetail: productClick,
+    });
+  };
 
-    let product = this.mangDienThoai.map((product, index) => {
+  renderPhoneList = () => {
+    let product = this.productList.map((product, index) => {
       return (
         <div className="col-4" key={index}>
-          <SanPham sp={product} detail={this.detail}/>
+          <PhoneList productList={product} handleClick={this.handleClick} />
         </div>
       );
     });
     return product;
   };
 
-
-  detail = (sanPhamClick) => {
-      this.setState({
-          sanPhamChiTiet:sanPhamClick
-      })
-  }
-
   render() {
-    let { sanPhamChiTiet } = this.state; //bóc tách thuộc tính sanPhamChiTiet từ state
     return (
       <div className="container">
-        <h3 className="text-center">Danh sách sản phẩm</h3>
-        <div className="row">{this.renderProduct()}</div>
-
-        <div className="row mt-5">
-          <div className="col-4">
-            <h3>{sanPhamChiTiet.tenSP}</h3>
-            <img src={sanPhamChiTiet.hinhAnh} alt="..." height="300" />
-          </div>
-          <div className="col-8">
-            <h3>Thông số kĩ thuật</h3>
-            <table className="table">
-              <thead>
-                <tr>
-                  <th>Màn hình</th>
-                  <th>{sanPhamChiTiet.manHinh}</th>
-                </tr>
-                <tr>
-                  <th>Hệ điều hành</th>
-                  <th>{sanPhamChiTiet.heDieuHanh}</th>
-                </tr>
-                <tr>
-                  <th>Camera trước</th>
-                  <th>{sanPhamChiTiet.cameraTruoc}</th>
-                </tr>
-                <tr>
-                  <th>Camera sau</th>
-                  <th>{sanPhamChiTiet.cameraSau}</th>
-                </tr>
-                <tr>
-                  <th>RAM</th>
-                  <th>{sanPhamChiTiet.ram}</th>
-                </tr>
-                <tr>
-                  <th>ROM</th>
-                  <th>{sanPhamChiTiet.rom}</th>
-                </tr>
-              </thead>
-            </table>
-          </div>
-        </div>
+        <div className="row">{this.renderPhoneList()}</div>
+        <ProductDetail productDetail={this.state.productDetail} />
       </div>
     );
   }
 }
+
+

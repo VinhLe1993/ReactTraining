@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 
-export default class SanPham extends Component {
+export default class PhoneList extends Component {
   render() {
-    let { sp } = this.props;
+    let { productList } = this.props;
     return (
       <div className="card">
-        <img src={sp.hinhAnh} alt="..." height={350} />
+        <img src={productList.hinhAnh} alt="..." height={350} />
         <div className="card-body">
-          <h3>{sp.tenSP}</h3>
-          <p>{sp.giaBan}</p>
+          <h3>{productList.tenSP}</h3>
+          <p>{productList.giaBan}</p>
           <button
             className="btn btn-success"
             onClick={() => {
-              this.props.detail(sp);
+              this.props.handleClick(productList);
             }}
           >
             Xem chi tiết
@@ -22,3 +22,5 @@ export default class SanPham extends Component {
     );
   }
 }
+
+
