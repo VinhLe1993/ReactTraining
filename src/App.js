@@ -13,6 +13,7 @@
 // import GlassShop from "./Components/BaiTapThuKinh/GlassShop.js";
 // import BaiTapXemChiTiet from "./Props/BaiTapXemChiTiet/BaiTapXemChiTiet.js";
 // import ExerciseCarStore from "./Props/ExerciseCarStore/ExerciseCarStore.js";
+import BaiTapGioHang from "./DemoRedux/BaiTapGioHang.js";
 import ShoppingCart from "./Props/ShoppingCart/ShoppingCart.js";
 
 function App() {
@@ -31,7 +32,8 @@ function App() {
       {/* <ShoesShop /> */}
       {/* <GlassShop /> */}
       {/* <BaiTapXemChiTiet /> */}
-      <ShoppingCart />
+      {/* <ShoppingCart /> */}
+      <BaiTapGioHang />
     </div>
   );
 }
