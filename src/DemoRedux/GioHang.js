@@ -119,6 +119,8 @@ class GioHang extends Component {
   }
 }
 
+//Hàm này sẽ giúp gửi dữ liệu lên redux (giống)
+
 //Hàm này giúp lấy giá trị state từ redux về biến đổi thành props của component
 
 const mapStateToProps = (rootReducer) => {

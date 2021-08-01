@@ -13,8 +13,10 @@
 // import GlassShop from "./Components/BaiTapThuKinh/GlassShop.js";
 // import BaiTapXemChiTiet from "./Props/BaiTapXemChiTiet/BaiTapXemChiTiet.js";
 // import ExerciseCarStore from "./Props/ExerciseCarStore/ExerciseCarStore.js";
-import BaiTapGioHang from "./DemoRedux/BaiTapGioHang.js";
-import ShoppingCart from "./Props/ShoppingCart/ShoppingCart.js";
+// import BTBaoBuaKeo from "./BaiTapRedux/BaiTapBaoBuaKeo/BTBaoBuaKeo.js";
+import DiceGame from "./BaiTapRedux/DiceGame/DiceGame.js";
+// import BaiTapGioHang from "./DemoRedux/BaiTapGioHang.js";
+// import ShoppingCart from "./Props/ShoppingCart/ShoppingCart.js";
 
 function App() {
   return (
@@ -33,7 +35,8 @@ function App() {
       {/* <GlassShop /> */}
       {/* <BaiTapXemChiTiet /> */}
       {/* <ShoppingCart /> */}
-      <BaiTapGioHang />
+      {/* <BTBaoBuaKeo /> */}
+      <DiceGame />
     </div>
   );
 }
