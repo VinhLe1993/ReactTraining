@@ -43,6 +43,10 @@ const mapDispatchToProps = (dispatch) => {
                 count ++;
                 if (count > 20) {
                     clearInterval(loopRandom)
+
+                    dispatch({
+                        type: 'END_GAME',
+                    })
                 }
             },100)
            

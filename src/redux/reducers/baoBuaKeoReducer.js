@@ -1,12 +1,12 @@
 const stateDefault = {
   arrSelector: [
-    { id: "keo", img: "./img/BaoBuaKeo/keo.png", select: false },
-    { id: "bua", img: "./img/BaoBuaKeo/bua.png", select: true },
+    { id: "keo", img: "./img/BaoBuaKeo/keo.png", select: true },
+    { id: "bua", img: "./img/BaoBuaKeo/bua.png", select: false},
     { id: "bao", img: "./img/BaoBuaKeo/bao.png", select: false },
   ],
   result: "You Won!",
-  roundYouWon: 10,
-  roundYouPlayed: 6,
+  roundYouWon: 0,
+  roundYouPlayed: 0,
   computer: { id: "bua", img: "./img/BaoBuaKeo/bua.png" },
 };
 
@@ -21,6 +21,7 @@ const baoBuaKeoReducer = (state = stateDefault, action) => {
         }
         return { ...item, select: false };
       });
+      //setState của arrSelector => render lại giao diện
       state.arrSelector = arrSelectedUpdate;
       return { ...state };
     }
@@ -32,6 +33,45 @@ const baoBuaKeoReducer = (state = stateDefault, action) => {
 
       return { ...state };
     }
+    case "END_GAME":
+      state.roundYouPlayed += 1;
+      let player = state.arrSelector.find((item) => item.select === true);
+      let computer = state.computer;
+
+      switch (player.id) {
+        case "keo":
+          if (computer.id === "keo") {
+            state.result = "Draw !!!";
+          } else if (computer.id === "bua") {
+            state.result = "You are Doomed !!!";
+          } else {
+            state.roundYouWon += 1;
+            state.result = "Hasta La Vista, Baby !";
+          } break;
+        case "bua":
+          if (computer.id === "keo") {
+            state.roundYouWon += 1;
+            state.result = "Hasta La Vista, Baby !";
+          } else if (computer.id === "bua") {
+            state.result = "Draw !!!";
+          } else {
+            state.result = "You are Doomed !!!";
+          } break;
+        case "bao":
+          if (computer.id === "keo") {
+            state.result = "You are Doomed !!!";
+          } else if (computer.id === "bua") {
+            state.roundYouWon += 1;
+            state.result = "Hasta La Vista, Baby !";
+          } else {
+            state.result = "Draw !!!";
+          } break;
+        default:
+          state.result = "Hasta La Vista, Baby !";
+    
+      }
+
+      return { ...state };
 
     default:
       return { ...state };
