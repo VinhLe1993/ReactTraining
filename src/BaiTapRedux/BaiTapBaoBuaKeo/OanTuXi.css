@@ -1,3 +1,8 @@
+@font-face {
+	font-family: fontGame;
+	src: url(../../assets/img/DiceGame/Pony.ttf);
+}
+
 .gameOanTuXi {
     background-image: url(../assets/bgGame.png);
     width: 100%;
@@ -5,6 +10,7 @@
     position: fixed;
     color: white;
     background-size: 100%;
+	font-family: fontGame;
 }
 
 .speech-bubble {
@@ -37,10 +43,12 @@
 	justify-content: space-between;
 }
 
+/* Player */
+
 .player {
 	display: flex;
 	flex-direction: column;
-	/* margin: 3rem 3rem; */
+	margin: 3rem 3rem;
 }
 
 .player .player__img {
@@ -50,8 +58,8 @@
 }
 
 .player .player__img .player__selected {
-	width: 10rem;
-	height: 10rem;
+	width: 8rem;
+	height: 8rem;
 	border: 5px solid #45D994;
 	border-radius: 2rem;
 	display: flex;
@@ -60,13 +68,13 @@
 }
 
 .player .player__img .player__selected img {
-	width: 5rem;
-	height: 5rem;
+	width: 4rem;
+	height: 4rem;
 }
 
 .player .player__img img {
-	height: 18rem;
-	width: 15rem;
+	height: 12rem;
+	width: 10rem;
 }
 
 .player .player__selector {
@@ -75,11 +83,73 @@
 }
 
 .player .player__selector button {
-	width: 5rem;
-	height: 5rem;
+	width: 3rem;
+	height: 3rem;
 }
 
 .player .player__selector button img {
 	width: 100%;
+}
+
+/* MainDesk */
+
+.main__desk {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 3rem;
+}
+
+.main__desk .info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.main__desk .info h3 {
+	color: #45D994;
+	font-size: 2.5rem;
+}
+
+.main__desk .info button {
+	margin-top: 2rem;
+}
+
+.main__desk .dialog {
+	color: orange;
+	font-size: 2.5rem;
+}
+
+/* Computer */
+
+.computer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 3rem 3rem 6rem 3rem;
+}
+
+.computer .computer__selected {
+	width: 8rem;
+	height: 8rem;
+	border: 5px solid #45D994;
+	border-radius: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.computer .computer__selected img {
+	width: 4rem;
+	height: 4rem;
+}
+
+.computer img {
+	height: 12rem;
+	width: 10rem;
+	
 }
 

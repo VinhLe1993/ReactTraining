@@ -12,7 +12,7 @@ export default class BTBaoBuaKeo extends Component {
           <Player />
 
           <MainDesk />
-
+          
           <Computer />
         </div>
       </div>
