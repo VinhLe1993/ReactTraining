@@ -80,6 +80,7 @@
 .player .player__selector {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 }
 
 .player .player__selector button {
