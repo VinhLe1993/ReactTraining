@@ -1,15 +1,17 @@
 import { combineReducers, createStore } from "redux";
-import { gioHangReducer } from "./reducers/gioHangReducer";
-import { diceGameReducer } from "./reducers/diceGameReducer";
-import baoBuaKeoReducer  from "./reducers/baoBuaKeoReducer";
-import { BTQLReducer } from "./reducers/BTQLReducer";
+import { gioHangReducer } from "./gioHangReducer";
+import { diceGameReducer } from "./diceGameReducer";
+import baoBuaKeoReducer  from "./baoBuaKeoReducer";
+import { BTQLReducer } from "./BTQLReducer";
+import BTDatVeReducer from "./BTDatVeReducer";
 //state trong redux là reducer
 const rootReducer = combineReducers({
   //Các state được lưu trữ tại đây
   gioHangReducer: gioHangReducer,
   diceGameReducer,
   baoBuaKeoReducer,
-  BTQLReducer
+  BTQLReducer,
+  BTDatVeReducer,
 });
 
 export const store = createStore(
